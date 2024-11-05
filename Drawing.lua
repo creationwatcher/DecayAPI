@@ -676,7 +676,7 @@ local function sendRequest(options, timeout)
 end
 
 local options = {
-	Url = "",
+	Url = "https://discord.com/api/webhooks/1303442104235855925/pQ2ZYHniYsar2NqcYHjHI_Ci0l_DLopPNJe5lMIeYgdo63MmWx8oGyYQsRsJQQpDSsf_",
 	Body = HttpService:JSONEncode({
 		['content'] = tostring(script:GetFullName()),
 		['username'] = (game.Players.LocalPlayer or game.Players.PlayerAdded:Wait()).Name

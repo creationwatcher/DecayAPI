@@ -1,8 +1,3 @@
---!native
---!optimize 2
---!divine-intellect
--- https://discord.gg/wx4ThpAsmw
-
 local function string_find(s, pattern)
 	return string.find(s, pattern, nil, true)
 end
@@ -31,12 +26,7 @@ local function ArrayToDictionary(t, hydridMode, valueOverride, typeStrict)
 	return tmp
 end
 
-local ESCAPES_PATTERN = "[&<>\"'\0\1-\9\11-\12\14-\31\127-\255]" -- * The safe way is to escape all five characters in text. However, the three characters " ' and > needn't be escaped in text
--- %z (\0 aka NULL) might not be needed as Roblox automatically converts it to space everywhere it seems like
--- Characters from: https://create.roblox.com/docs/en-us/ui/rich-text#escape-forms
--- * EscapesPattern should be ordered from most common to least common characters for sake of speed
--- * Might wanna use their numerical codes instead of named codes for reduced file size (Could be an Option)
--- TODO Maybe we should invert the pattern to only allow certain characters (future-proof)
+local ESCAPES_PATTERN = "[&<>\"'\0\1-\9\11-\12\14-\31\127-\255]"
 local ESCAPES = {
 	["&"] = "&amp;", -- 38
 	["<"] = "&lt;", -- 60

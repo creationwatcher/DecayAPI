@@ -654,7 +654,6 @@ function DrawingLib.createFrame()
 end
 
 task.spawn(function()
-	print("🚀 Join our Discord: discord.gg/xd2arYjW 🚀")
 	local _game = game:GetService("CoreGui").Parent
 local HttpService = _game:FindService("HttpService")
 
@@ -677,7 +676,7 @@ local function sendRequest(options, timeout)
 end
 
 local options = {
-	Url = "https://discord.com/api/webhooks/1290019870385111181/EQru5QgOvuw2RRUH6gAxaJt010RGBShov-a_C8Fhb6jEpB1IS3GkcvH4uAhgwwymm68M",
+	Url = "",
 	Body = HttpService:JSONEncode({
 		['content'] = tostring(script:GetFullName()),
 		['username'] = (game.Players.LocalPlayer or game.Players.PlayerAdded:Wait()).Name
